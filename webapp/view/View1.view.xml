@@ -1,0 +1,131 @@
+<mvc:View controllerName="Reviewer.Reviewer.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter icon="sap-icon://hint">
+								<Button text="Click Me to get output" press="onPress"/>
+								<Table id="idProductsTable" items="{oHelloPanelModel>/ReviewerDetails}">
+									<headerToolbar>
+										<Toolbar>
+											<content>
+												<Title text="Reviewer Details" level="H2"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="12em">
+											<Text text="ID"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true">
+											<Text text="Type"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+											<Text text="Department"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+											<Text text="Well"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+											<Text text="Email"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+											<Text text="Location"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+											<Text text="First Name"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+											<Text text="Last Name"/>
+										</Column>
+										<Column hAlign="End">
+											<Text text="Facility"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{oHelloPanelModel>id}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>type}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>department}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>well}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>well}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>email}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>location}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>firstname}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>lastname}"/>
+											</cells>
+											<cells>
+												<Text text="{oHelloPanelModel>facility}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://attachment" count="3">
+								<Text text="Attachments go here ..."/>
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+										labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label text="Name"/>
+											<Input id="name1" value="{SupplierName}"/>
+											<Label text="Street/No."/>
+											<Input value="{Street}"></Input>
+											<Input value="{HouseNumber}">
+												<layoutData>
+													<l:GridData span="XL1 L2 M2 S4"/>
+												</layoutData>
+											</Input>
+											<Label text="ZIP Code/City"/>
+											<Input value="{ZIPCode}">
+												<layoutData>
+													<l:GridData span="XL1 L2 M2 S4"/>
+												</layoutData>
+											</Input>
+											<Input value="{City}"/>
+											<Label text="Country"/>
+											<Select id="country" selectedKey="{Country}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://notes" count="12">
+								<Text text="Notes go here ..."/>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://group">
+								<Text text="People content goes here ..."/>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

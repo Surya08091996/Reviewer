@@ -1,0 +1,9 @@
+/* Enter your custom styles here */
+
+.sapMyField {
+    margin-right: 48px;
+}
+
+.sapMyInput .sapMInputBaseInner {
+	color: red;
+}
